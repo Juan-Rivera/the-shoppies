@@ -6,7 +6,7 @@ import navButton1 from '../images/nav-button-1.png';
 const Hero = () => {
 
     return (
-        <div>
+        <div className="section1">
             <header>
                 <img src={shopifyLogo} alt='shopify-logo' width="299" height="188" />
                 <h1>The Shoppies</h1>
