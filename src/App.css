@@ -44,44 +44,89 @@ html {
 
 /* --------------- SECTION 2 --------------- */
 #section2 {
-  height: 100vh;
-  border: 4px solid red;
+  height: 85vh;
+  padding-top: 15vh;
   background-color: #004C3F;
   display: flex;
 } 
-/* left side */
-#left-s2 {
-  width: 875px;
-  border: 4px blue solid;
-}
-/* TITLE */
-#left-s2 h1 {
-  color: white;
-}
-/* INPUT */
-#left-s2 input {
-  background-color: #95BF46;
-  background-image: url('./images/icons/search.svg');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  font-family: 'Josefin Sans', 'sans-serif';
-  padding-left: 44px;
-  border: none;
-  width: 200px;
-  height: 50px;
-}
-.scroll-buttons {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  height: 520px;
-  justify-content: space-between;
-}
-.search-list {
-  display: flex;
-}
-.list {
-  display: flex;
-  flex-direction: column;
-}
-
+  /* --------------- SECTION 2 - LEFT ---------------*/
+  #left-s2 {
+    width: 875px;
+  }
+    /* ---------------  SEARCH --------------- */
+    .search{
+      margin-bottom: 25px;
+    }
+      /* --------------- SEARCH TITLE --------------- */
+      #left-s2 h1 {
+        color: white;
+      }
+      /* --------------- TEXT FIELD INPUT --------------- */
+      #left-s2 input {
+        background-color: #95BF46;
+        background-image: url('./images/icons/search.svg');
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        font-family: 'Josefin Sans', 'sans-serif';
+        padding-left: 44px;
+        border: none;
+        width: 200px;
+        height: 50px;
+      }
+    /* --------------- SEARCH LIST --------------- */
+      .search-list {
+        display: flex;
+        width: 100%;
+      }
+      /* --------------- SCROLL BUTTONS --------------- */
+      .scroll-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 133px;
+        height: 520px;
+        justify-content: space-between;
+      }
+      /* --------------- LIST --------------- */
+      .list {
+        width: 738px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+        /* --------------- MOVIE --------------- */
+        .movie{
+          border: white 4px solid;
+          width: 100%;
+          height: 100px;
+          display: flex;
+          justify-content: space-between;
+        }
+          /* --------------- INFO-CONTAINER --------------- */
+          .info-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 25px;
+          }
+          .title {
+            height: 36px;
+            display: flex;
+            align-items: center;
+            color: white;
+          }
+          .year {
+            display: flex;
+            align-items: center;
+            height: 25px;
+            color: white;
+          }
+          /* --------------- NOMINATION BUTTON --------------- */
+          .nom-button {
+            display: flex;
+            align-items: center;
+            margin-right: 25px;
+          }
+  /* --------------- SECTION 2 - RIGHT ---------------*/
+  #right-s2 {
+    
+  }

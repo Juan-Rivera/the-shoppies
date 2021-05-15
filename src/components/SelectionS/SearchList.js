@@ -9,11 +9,11 @@ import Movie from './Movie';
 const SearchList = (props) => {
     const [page, setPage] = useState(0)
     const [display, setDisplay] = useState([])
-    const searchList = useSelector(state => state.SLreducer.searchList)
 
+    // redux states
+    const searchList = useSelector(state => state.SLreducer.searchList)
     const nominatedList = useSelector(state => state.NLreducer.nominatedList)
 
-    // paginated list and display
     let paginatedList = [];
     
     // ------------------------------------------------------------------------//

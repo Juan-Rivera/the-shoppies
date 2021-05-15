@@ -16,14 +16,26 @@ const Movie = (props) => {
 
     return (
         <div className="movie">
-            <div className="title">
-                <h3>{props.movie.Title}</h3>
+            <div className="info-container">
+                <div className="title">
+                    <h3>{props.movie.Title}</h3>
+                </div>
+                <div className="year">
+                    <p>{props.movie.Year}</p>
+                </div>
             </div>
-            <div className="year">
-                <p>{props.movie.Year}</p>
+            <div className="nom-button">
+                {nominated ? 
+                <img src={nomYes}
+                alt="movie nominated" 
+                /> 
+                : 
+                <img src={nomNo}
+                alt="movie not nominated yet" 
+                onClick={()=> handleNominate(props.movie)}
+                onMouseOver={e => (e.currentTarget.src = nomNoHover)}
+                onMouseOut={e => (e.currentTarget.src = nomNo)}/>}
             </div>
-                
-                <button className="nomination-button" onClick={() => handleNominate()} disable={nominated} />
         </div>
     )
 }
