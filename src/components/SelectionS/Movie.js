@@ -1,30 +1,28 @@
-import React from 'react';
-import nominationNo from '../../images/nomination-no.png';
-import nominationNoHover from '../../images/nomination-no-hover.png';
-import nominationYes from '../../images/nomination-yes.png';
+import React, { useState } from 'react';
+
+import nomNo from '../../images/icons/nom-no.svg';
+import nomNoHover from '../../images/icons/nom-no-hover.svg';
+import nomYes from '../../images/icons/nom-yes.svg';
+
 
 const Movie = (props) => {
+    const [nominated, setNominated] = useState(props.isNominated)
+
+    // sends movie to nomination list and clears search
+    const handleNominate = (movie) =>{
+            setNominated(true)
+            props.addNomination(movie)
+    }
+
     return (
         <div className="movie">
             <div className="title">
-                {props.movie.Title}
+                <h3>{props.movie.Title}</h3>
             </div>
             <div className="year">
-                {props.movie.Year}
+                <p>{props.movie.Year}</p>
             </div>
-            <div className={"nomination-button"}>
-                {props.movie.nominated === true ? 
-                <img src={nominationYes}
-                alt="nomination button nominated" 
-                /> 
-                : 
-                <img src={nominationNo}
-                alt="nomination button not nominated yet" 
-                onClick={()=> props.handleNominate}
-                onMouseOver={e => (e.currentTarget.src = nominationNoHover)}
-                onMouseOut={e => (e.currentTarget.src = nominationNo)}/>}
-                
-            </div>
+                <button className="nomination-button" onClick={() => handleNominate()} disable={nominated} />
         </div>
     )
 }

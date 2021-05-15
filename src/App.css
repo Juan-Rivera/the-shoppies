@@ -1,38 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --------------- SECTION 1 ---------------  */
+#section1 {
+  background-color: #FBF7ED;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* TOP SECTION */
+header{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+header h1{
+  padding-top: 40px;
+}
+
+/* BOTTOM SECTION */
+.cta {
+  height: 20vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+}
+.cta h2 {
+  color: #004C3F;
+  margin-bottom: 1em;
+}
+
+
+/* for page scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------------- SECTION 2 --------------- */
+#section2 {
+  height: 100vh;
+  border: 4px solid red;
+  background-color: #004C3F;
+  display: flex;
+} 
+/* left side */
+#left-s2 {
+  width: 875px;
+  border: 4px blue solid;
+}
+/* TITLE */
+#left-s2 h1 {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+/* INPUT */
+#left-s2 input {
+  background-color: #95BF46;
+  background-image: url('./images/icons/search.svg');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  font-family: 'Josefin Sans', 'sans-serif';
+  padding-left: 44px;
+  border: none;
+  width: 200px;
+  height: 50px;
+}
+.scroll-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+  justify-content: space-between;
+}
+.search-list {
+  display: flex;
+}
+.list {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

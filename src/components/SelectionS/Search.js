@@ -1,13 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import useDebounce from '../../utilities/useDebounce';
 
-const Search = () => {
-    const [search, setSearch] = useState();
+const initialSearch = {
+    title: "",
+}
+const Search = (props) => {
+    const [search, setSearch] = useState(initialSearch);
+
+    // no action for 1 second
+    const debouncedSearch = useDebounce(search, 1000);
+
+    useEffect(() => {
+        if (!search.title) {
+            return null;
+        }
+        // 
+        if (debouncedSearch) {
+            props.handleSearch(search.title)
+        }
+
+    }, [debouncedSearch]);
 
     const handleChange = e => {
 		setSearch({
 			...search,
 			[e.target.name]: e.target.value,
-		});
+        });
     };
     
     return (

@@ -2,6 +2,7 @@ import {
     FETCH_SEARCH_DATA,
     FETCH_SEARCH_SUCCESS,
     FETCH_SEARCH_FAILURE,
+    CLEAR_SEARCH,
 
 } from '../actions/SLactions';
 
@@ -29,8 +30,14 @@ function SLreducer(state = defaultState, action){
             return {
                 ...state,
                 isFetching: false,
+                searchList: '0 results found',
                 error: action.payload,
             };
+        case CLEAR_SEARCH:
+            return {
+                ...state,
+                searchList: []
+            }
         default: return state
     }
 }
