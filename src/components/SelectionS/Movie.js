@@ -22,6 +22,7 @@ const Movie = (props) => {
             <div className="year">
                 <p>{props.movie.Year}</p>
             </div>
+                
                 <button className="nomination-button" onClick={() => handleNominate()} disable={nominated} />
         </div>
     )
