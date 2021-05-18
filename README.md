@@ -22,7 +22,11 @@ Example Given:
 
 <img width="625" alt="Screen Shot 2021-05-08 at 8 24 52 PM" src="https://user-images.githubusercontent.com/16306067/117556872-7eb0b100-b03b-11eb-8e6e-5aaaa814c9c3.png">
 
-Figma Design:
+My Figma Design:
 
-<img width="625" alt="Shoppies Mock Up Design" src="https://user-images.githubusercontent.com/16306067/117556904-cdf6e180-b03b-11eb-82ab-1efbc80e1588.png">
+![shoppies1](https://user-images.githubusercontent.com/16306067/118587096-f84a4c80-b769-11eb-93b9-fa6bc7f656d7.png)
+![shoppies2](https://user-images.githubusercontent.com/16306067/118587101-fc766a00-b769-11eb-9545-84187809d636.png)
+![shoppies3](https://user-images.githubusercontent.com/16306067/118587171-1b74fc00-b76a-11eb-9937-fb6b04b3c7b4.png)
+
+
 
