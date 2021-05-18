@@ -9,7 +9,7 @@ const Completed = () => {
                 <h1> Congrats! </h1>
                 <p> You have successfully chosen your 5 films. </p>
                 <p> Would you like to submit these films for the shoppies awards? </p>
-                <a href="/submitted"> <img src={submit}/> </a> 
+                <a href="/submitted"> <img src={submit} alt="submit button"/> </a> 
             </div>
             <div className="right-s2 nom-complete">
                 <Nominated  

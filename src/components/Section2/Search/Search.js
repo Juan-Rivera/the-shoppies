@@ -16,7 +16,6 @@ const Search = () => {
         if (!search.title) {
             return null;
         }
-        // 
         if (debouncedSearch) {
             dispatch(actions.SLactions.fetchMovies(search.title))
         }

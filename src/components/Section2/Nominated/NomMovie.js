@@ -26,6 +26,7 @@ const NomMovie = (props) => {
                 <img 
                 src={removeButton} 
                 onClick={() => dispatch(actions.NLactions.deleteNomination(props.movie))}
+                alt="button to remove nomination" 
                 />
             </div>
         </div>
