@@ -1,6 +1,7 @@
 import {
     ADD_NOMINATION,
     DELETE_NOMINATION,
+    COMPLETE_NOMINATION,
 } from '../actions/NLactions';
 
 const defaultState = {
@@ -17,16 +18,17 @@ function NLreducer(state = defaultState, action){
             };
         // DELETING
         case DELETE_NOMINATION:
+            const newNom = state.nominatedList.filter(movie => movie.Title !== action.payload)
             return {
                 ...state,
-                nominatedList: state.nominatedList.filter(movie => movie.Title !== action.payload),
+                nominatedList: newNom,
             };
         // NOM COMPLETED
-        // case NOMINATION_COMPLETED:
-        //     return {
-        //         ...state,
-        //         isCompleted: true,
-        //     }
+        case COMPLETE_NOMINATION:
+            return {
+                ...state,
+                isCompleted: action.payload,
+            }
         default: return state
     }
 }

@@ -11,58 +11,83 @@
   height: 100vh;
 }
 
-/* TOP SECTION */
-header{
-  display: flex;
-  flex-direction: row;
+  /* ---------------  HEADER --------------- */
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  header h1{
+    padding-top: 40px;
+  }
+
+  /* ---------------  CTA --------------- */
+  .cta {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .cta h2 {
+    color: #004C3F;
+    margin-bottom: 1em;
+  }
+
+
+  /* for page scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+/* --------------- SECTION 2 (COMPLETE) --------------- */
+.complete {
+  height: 100vh;
+
+  background-color: #004C3F;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-}
-header h1{
-  padding-top: 40px;
-}
-
-/* BOTTOM SECTION */
-.cta {
-  height: 20vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
-.cta h2 {
-  color: #004C3F;
-  margin-bottom: 1em;
+.completed-banner{
+  color: white;
 }
-
-
-/* for page scroll */
-html {
-  scroll-behavior: smooth;
+.complete .nominated-section2 {
+  margin-bottom: 25px;
+}
+.nom-complete {
+  border: red 4px;
+  width: 30%;
+  height: fit-content;
 }
 
-/* --------------- SECTION 2 --------------- */
-#section2 {
+
+/* --------------- SECTION 2 (INCOMPLETE) --------------- */
+.incomplete {
   height: 85vh;
   padding-top: 15vh;
   background-color: #004C3F;
   display: flex;
-} 
+}
   /* --------------- SECTION 2 - LEFT ---------------*/
-  #left-s2 {
-    width: 875px;
+  .left-s2 {
+    width: 60%;
   }
     /* ---------------  SEARCH --------------- */
     .search{
       margin-bottom: 25px;
+      float: right;
+      margin-right: 10%;
+      width: 500px;
     }
       /* --------------- SEARCH TITLE --------------- */
-      #left-s2 h1 {
+      .search h1 {
         color: white;
       }
       /* --------------- TEXT FIELD INPUT --------------- */
-      #left-s2 input {
+      .search input {
         background-color: #95BF46;
         background-image: url('./images/icons/search.svg');
         background-position: 10px 12px;
@@ -82,13 +107,13 @@ html {
       .scroll-buttons {
         display: flex;
         flex-direction: column;
-        width: 133px;
-        height: 520px;
+        width: 20%;
+        height: 60vh;
         justify-content: space-between;
       }
       /* --------------- LIST --------------- */
       .list {
-        width: 738px;
+        width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -127,6 +152,58 @@ html {
             margin-right: 25px;
           }
   /* --------------- SECTION 2 - RIGHT ---------------*/
-  #right-s2 {
-    
+  .right-s2 {
+    width: 25%;
+    margin-left: 50px;
+    padding-top: 15vh;
   }
+    .nom-counter{
+      color: white;
+    }
+    /* --------------- NOMINATED MOVIE ---------------*/
+    .nom-movie {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid white;
+      padding: 10px;
+    }
+    .nom-contain{
+      display: flex;
+    }
+      /* --------------- INDEX ---------------*/
+      .index{
+        height: 64px;
+        padding-top: 5px;
+        display: flex;
+        align-items: center;
+
+      }
+      .index h1{
+        color: #F2C94C;
+        font-size: 64px;
+      }
+      /* --------------- NOM-INFO ---------------*/
+      .nom-title {
+        height: 36px;
+        display: flex;
+        align-items: center;
+        color: white;
+      }
+      .nom-year {
+        display: flex;
+        align-items: center;
+        height: 25px;
+        color: white;
+      }
+
+/* --------------- SUBMITTED ---------------*/
+.submitted {
+  height: 100vh;
+  padding-top: 20px;
+  background-color: #004C3F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import searchUp from '../../images/icons/list-up.svg';
-import searchDown from '../../images/icons/list-down.svg';
-import { paginate } from '../../store/actions/SLactions';
+import searchUp from '../../../images/icons/list-up.svg';
+import searchDown from '../../../images/icons/list-down.svg';
+import { paginate } from '../../../utilities/searchList/Paginate.js';
 
 import Movie from './Movie';
 
-const SearchList = (props) => {
+const SearchList = () => {
     const [page, setPage] = useState(0)
     const [display, setDisplay] = useState([])
 
@@ -26,13 +26,10 @@ const SearchList = (props) => {
     // handles display
     useEffect(() => {
         paginatedList = paginate(searchList)
-        console.log(page)
         if(paginatedList !== undefined){
             setDisplay(paginatedList[page]);
         }
-        console.log(`inside useEffect: ${display}`)
     }, [searchList, page])
-    console.log(`outside useEffect: ${display}`)
     // ------------------------------------------------------------------------//
 
     // changes the page up or down with a range of 0-maxPages(calculated)
@@ -66,11 +63,10 @@ const SearchList = (props) => {
                     let isNominated = nominatedList.includes(movie)
                         return <Movie 
                                     key={movie.imdbID} 
-                                    movie={movie} 
-                                    addNomination={props.addNomination} 
+                                    movie={movie}  
                                     isNominated={isNominated}
                                 />
-                }) : null }
+                }) : null}
             </div>
         </div>
     )

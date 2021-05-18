@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import useDebounce from '../../utilities/useDebounce';
+import useDebounce from '../../../utilities/useDebounce';
+import { useDispatch } from 'react-redux';
+import actions from '../../../store/actions/index';
 
 const initialSearch = {
     title: "",
 }
-const Search = (props) => {
+const Search = () => {
     const [search, setSearch] = useState(initialSearch);
-
+    const dispatch = useDispatch();
     // no action for 1 second
     const debouncedSearch = useDebounce(search, 1000);
 
@@ -16,7 +18,7 @@ const Search = (props) => {
         }
         // 
         if (debouncedSearch) {
-            props.handleSearch(search.title)
+            dispatch(actions.SLactions.fetchMovies(search.title))
         }
 
     }, [debouncedSearch]);
