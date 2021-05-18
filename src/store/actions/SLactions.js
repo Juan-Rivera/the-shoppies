@@ -26,6 +26,7 @@ export const fetchMovies = (search) => {
 };
 
 
-export default {
-  fetchMovies,
+const exports = {
+  fetchMovies
 }
+export default exports;

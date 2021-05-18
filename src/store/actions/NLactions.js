@@ -1,6 +1,5 @@
 export const ADD_NOMINATION = "ADD_NOMINATION";
 export const DELETE_NOMINATION = "DELETE_NOMINATION";
-export const COMPLETE_NOMINATION = "COMPLETE_NOMINATION";
 
 export const addNomination = (movie) => {
     return (dispatch) => {
@@ -14,13 +13,8 @@ export const deleteNomination = (movie) => {
       dispatch({ type: DELETE_NOMINATION, payload: movie.Title });
     }
   };
-export const nomCompleted = (bool) => {
-  return(dispatch) => {
-    dispatch({ type: COMPLETE_NOMINATION, payload: bool })
-  }
-}
-  export default {
+  const exports = {
     addNomination,
     deleteNomination,
-    nomCompleted,
   }
+  export default exports;

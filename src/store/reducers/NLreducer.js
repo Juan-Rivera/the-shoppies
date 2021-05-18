@@ -1,12 +1,10 @@
 import {
     ADD_NOMINATION,
     DELETE_NOMINATION,
-    COMPLETE_NOMINATION,
 } from '../actions/NLactions';
 
 const defaultState = {
     nominatedList: [],
-    isCompleted: false,
   };
 function NLreducer(state = defaultState, action){
     switch(action.type){
@@ -23,12 +21,6 @@ function NLreducer(state = defaultState, action){
                 ...state,
                 nominatedList: newNom,
             };
-        // NOM COMPLETED
-        case COMPLETE_NOMINATION:
-            return {
-                ...state,
-                isCompleted: action.payload,
-            }
         default: return state
     }
 }
