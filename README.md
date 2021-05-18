@@ -1,5 +1,6 @@
-# <a href="https://juan-the-shoppies.vercel.app/">The Shoppies </a>
-##### Designed and Developed by Juan Rivera
+# <a href="https://juan-the-shoppies.vercel.app/">The Shoppies </a> 
+##### (desktop only)
+###### Designed and Developed by Juan Rivera
 
 ## The Challenge
 Create a web application that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
